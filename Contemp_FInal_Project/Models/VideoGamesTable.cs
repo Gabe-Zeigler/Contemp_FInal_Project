@@ -2,16 +2,16 @@
 
 namespace Contemp_FInal_Project.Tables
 {
-    public class VideGamesTable
+    public class VideoGamesTable
     {
         [Key]
         public int GameID { get; set; }
         public string GameName { get; set; }
-        public string ReleaseDate { get; set; }
+        public DateTime ReleaseDate { get; set; }
         public string Publisher { get; set; }
         public double Ratings { get; set; }
-        public VideGamesTable() { }
-        public VideGamesTable(int gameID, string gameName, string releaseDate, string publisher, double ratings)
+        public VideoGamesTable() { }
+        public VideoGamesTable(int gameID, string gameName, DateTime releaseDate, string publisher, double ratings)
         {
             GameID = gameID;
             GameName = gameName;

@@ -7,13 +7,13 @@ using Contemp_FInal_Project.Tables;
 
 namespace Contemp_FInal_Project.Data
 {
-    public class Context : DbContext
+    public class Contemp_Final_Project_Context : DbContext
     {
-        public Context (DbContextOptions<Context> options)
+        public Contemp_Final_Project_Context (DbContextOptions<Contemp_Final_Project_Context> options)
             : base(options)
         {
         }
 
-        public DbSet<Contemp_FInal_Project.Tables.VideGamesTable> VideGamesTable { get; set; } = default!;
+        public DbSet<Contemp_FInal_Project.Tables.VideoGamesTable> VideoGamesTable { get; set; } = default!;
     }
 }
