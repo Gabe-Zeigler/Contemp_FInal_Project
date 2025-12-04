@@ -16,5 +16,6 @@ namespace Contemp_FInal_Project.Data
 
         public DbSet<Contemp_FInal_Project.Models.Food> Food { get; set; } = default!;
         public DbSet<Contemp_FInal_Project.Models.Student> Student { get; set; } = default!;
+        public DbSet<Contemp_FInal_Project.Models.VideoGamesTable> VideoGamesTable { get; set; } = default!;
     }
 }
