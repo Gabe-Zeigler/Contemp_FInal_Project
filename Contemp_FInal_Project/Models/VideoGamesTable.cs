@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Contemp_FInal_Project.Tables
+namespace Contemp_FInal_Project.Models
 {
     public class VideoGamesTable
     {
