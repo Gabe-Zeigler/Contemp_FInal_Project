@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Contemp_FInal_Project.Data;
-using Contemp_FInal_Project.Tables;
+using Contemp_FInal_Project.Models;
 
 namespace Contemp_FInal_Project.Controllers
 {
@@ -14,9 +14,9 @@ namespace Contemp_FInal_Project.Controllers
     [ApiController]
     public class VideoGamesTablesController : ControllerBase
     {
-        private readonly Contemp_Final_Project_Context _context;
+        private readonly Contemp_Final_ProjectContext _context;
 
-        public VideoGamesTablesController(Contemp_Final_Project_Context context)
+        public VideoGamesTablesController(Contemp_Final_ProjectContext context)
         {
             _context = context;
         }
