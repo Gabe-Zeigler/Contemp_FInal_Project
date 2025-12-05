@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contemp_FInal_Project.Migrations
 {
-    [DbContext(typeof(Contemp_Final_Project_Context))]
+    [DbContext(typeof(Contemp_FInal_ProjectContext))]
     partial class ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
