@@ -14,9 +14,9 @@ namespace Contemp_FInal_Project.Controllers
     [ApiController]
     public class VideoGamesTablesController : ControllerBase
     {
-        private readonly Contemp_Final_ProjectContext _context;
+        private readonly Contemp_FInal_ProjectContext _context;
 
-        public VideoGamesTablesController(Contemp_Final_ProjectContext context)
+        public VideoGamesTablesController(Contemp_FInal_ProjectContext context)
         {
             _context = context;
         }
@@ -24,17 +24,17 @@ namespace Contemp_FInal_Project.Controllers
         [HttpGet]
         public IActionResult GetGames()
         {
-            var gameList = _context.VideoGamesTable.ToList();
+            var gameList = _context.VideoGamesTables.ToList();
             return Ok(gameList);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetGamesId(int id)
         {
-            var gameId = _context.VideoGamesTable.Find(id);
+            var gameId = _context.VideoGamesTables.Find(id);
             if (id == null || id == 0)
             {
-                var gameList = _context.VideoGamesTable.Take(5).ToList();
+                var gameList = _context.VideoGamesTables.Take(5).ToList();
                 return Ok(gameList);
             } else if (gameId == null)
             {
@@ -49,7 +49,7 @@ namespace Contemp_FInal_Project.Controllers
         {
             try
             {
-                _context.VideoGamesTable.Add(VideoGamesTable);
+                _context.VideoGamesTables.Add(VideoGamesTable);
                 _context.SaveChanges();
             }
             catch (Exception ex)
@@ -84,14 +84,14 @@ namespace Contemp_FInal_Project.Controllers
         [HttpDelete("{id}")]
         public IActionResult DeleteGames(int id)
         {
-            var VideoGamesTable = _context.VideoGamesTable.Find(id);
+            var VideoGamesTable = _context.VideoGamesTables.Find(id);
             if (VideoGamesTable == null)
             {
                 return NotFound();
             }
             try
             {
-                _context.VideoGamesTable.Remove(VideoGamesTable);
+                _context.VideoGamesTables.Remove(VideoGamesTable);
                 _context.SaveChanges();
             }
             catch (Exception ex)

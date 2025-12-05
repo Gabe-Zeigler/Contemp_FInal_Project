@@ -4,6 +4,7 @@ using Contemp_FInal_Project.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Contemp_FInal_Project.Migrations
 {
     [DbContext(typeof(Contemp_FInal_ProjectContext))]
-    partial class Contemp_FInal_ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20251205003139_sportmigration")]
+    partial class sportmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

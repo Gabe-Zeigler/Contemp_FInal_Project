@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Contemp_FInal_Project.Migrations
 {
-    [DbContext(typeof(Contemp_Final_Project_Context))]
+    [DbContext(typeof(Contemp_FInal_ProjectContext))]
     [Migration("20251125183731_GameDateTypeFixedMigration")]
     partial class GameDateTypeFixedMigration
     {
