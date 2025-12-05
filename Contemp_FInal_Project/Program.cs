@@ -25,4 +25,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<Contemp_FInal_ProjectContext>();
+    context.Database.EnsureCreated();
+}
+
 app.Run();
